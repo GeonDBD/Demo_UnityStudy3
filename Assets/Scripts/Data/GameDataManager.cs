@@ -12,6 +12,7 @@ public class GameDataManager : MonoBehaviour
     public PlayerData playerData;       // 玩家数据
     public MusicData musicData;         // 音乐数据
     public List<RoleInfo> roleInfos;    // 角色信息数据
+    public RoleInfo nowRoleInfo;        // 当前游戏选择的角色信息
 
     private GameDataManager()
     {

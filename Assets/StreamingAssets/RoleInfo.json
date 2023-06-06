@@ -1,0 +1,4 @@
+[
+{"id":1,"res":"Role/1","atk":4,"lockMoney":0,"hp":100,"tips":"Tom","hitEff":"Eff/1"},
+{"id":2,"res":"Role/2","atk":4,"lockMoney":50,"hp":100,"tips":"FireBoomba","hitEff":"Eff/1"}
+]

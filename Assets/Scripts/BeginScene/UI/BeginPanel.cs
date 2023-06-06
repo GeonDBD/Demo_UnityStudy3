@@ -18,7 +18,7 @@ public class BeginPanel : BasePanel
             UIManager.Instance.HidePanel<BeginPanel>();
             Camera.main.GetComponent<CameraAnimator>().TurnLeft(() =>
             {
-                print("显示选择角色面板");
+                UIManager.Instance.ShowPanel<ChooseRolePanel>();
             });
         });
 
@@ -29,7 +29,7 @@ public class BeginPanel : BasePanel
 
         btnAbout.onClick.AddListener(() =>
         {
-            print("显示关于游戏面板");
+            UIManager.Instance.ShowPanel<AboutPanel>();
         });
 
         btnQuit.onClick.AddListener(() =>
