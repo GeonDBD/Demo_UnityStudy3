@@ -72,6 +72,7 @@ public class ChooseRolePanel : BasePanel
                 playerData.unlockedRole.Add(nowRoleInfo.id);
                 GameDataManager.Instance.SavePlayerData();
                 UpdateUnlockButton();
+
                 print("提示面板：购买成功");
             }
             else

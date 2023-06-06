@@ -6,12 +6,12 @@ using UnityEngine.Events;
 /// </summary>
 public abstract class BasePanel : MonoBehaviour
 {
-    private CanvasGroup canvasGroup;        // 控制面板透明度组件
-    private float alphaSpeed = 10;          // 淡入淡出速度
-    private UnityAction hidePanelCallBack = null;  // 隐藏面板时的回调委托函数
+    private CanvasGroup canvasGroup;                // 控制面板透明度组件
+    private float alphaSpeed = 10;                  // 淡入淡出速度
+    private UnityAction hidePanelCallBack = null;   // 隐藏面板时的回调委托函数
 
     [Header("面板显示标识符")]
-    public bool isShow = false;             // 是否显示标识符
+    public bool isShow = false;
 
     protected virtual void Awake()
     {
