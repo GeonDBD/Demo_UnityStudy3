@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// 面板基类
+/// </summary>
 public abstract class BasePanel : MonoBehaviour
 {
     private CanvasGroup canvasGroup;        // 控制面板透明度组件

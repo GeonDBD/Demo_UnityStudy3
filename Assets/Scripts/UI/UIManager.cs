@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// UI管理器
+/// </summary>
 public class UIManager
 {
     private static UIManager instance = new UIManager();
     public static UIManager Instance => instance;
 
-    private Transform canvasTrans;
+    private Transform canvasTrans;      // 画布组位置
     private Dictionary<string, BasePanel> panelDic = new Dictionary<string, BasePanel>();   // 面板字典：用于存储生成的面板
 
     private UIManager()
