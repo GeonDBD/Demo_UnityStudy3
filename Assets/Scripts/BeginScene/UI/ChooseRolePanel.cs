@@ -73,19 +73,21 @@ public class ChooseRolePanel : BasePanel
                 GameDataManager.Instance.SavePlayerData();
                 UpdateUnlockButton();
 
-                print("提示面板：购买成功");
+                // 提示
+                UIManager.Instance.ShowPanel<TipPanel>().ChangeTipContent("购买成功");
             }
             else
             {
-                print("提示面板：金钱不足");
+                // 提示
+                UIManager.Instance.ShowPanel<TipPanel>().ChangeTipContent("金钱不足");
             }
         });
 
         btnStart.onClick.AddListener(() =>
         {
-            GameDataManager.Instance.nowRoleInfo = this.nowRoleInfo;
+            GameDataManager.Instance.nowRoleInfo = nowRoleInfo;
             UIManager.Instance.HidePanel<ChooseRolePanel>();
-            print("加载游戏场景");
+            UIManager.Instance.ShowPanel<ChooseScenePanel>();
         });
 
         btnBack.onClick.AddListener(() =>

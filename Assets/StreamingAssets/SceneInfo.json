@@ -1,0 +1,5 @@
+[
+{"id":1,"imgRes":"Image/Scene/Scene_1","name":"誓死捍卫之地","sceneName":"GameScene1","tips":"在守卫雕像下击退所有丧尸，誓死捍卫领土","towerHp":100,"money":200},
+{"id":2,"imgRes":"Image/Scene/Scene_2","name":"幽火之森","sceneName":"GameScene2","tips":"前往那片幽暗的森林深处，出发寻找丧尸出现的真相","towerHp":100,"money":200},
+{"id":3,"imgRes":"Image/Scene/Scene_3","name":"熔岩旱土","sceneName":"GameScene3","tips":"哈哈哈哈哈啊","towerHp":100,"money":200}
+]
