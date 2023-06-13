@@ -17,6 +17,8 @@ public class GameDataManager
     public List<SceneInfo> sceneInfos;  // 场景信息表
     public SceneInfo nowSceneInfo;      // 当前游戏选择的场景信息
 
+    public List<ZombieInfo> zombieInfos;    // 丧尸信息表
+
     private GameDataManager()
     {
         // 初始化读取数据
@@ -24,6 +26,7 @@ public class GameDataManager
         musicData = JsonMgr.Instance.LoadData<MusicData>("MusicData");
         roleInfos = JsonMgr.Instance.LoadData<List<RoleInfo>>("RoleInfo");
         sceneInfos = JsonMgr.Instance.LoadData<List<SceneInfo>>("SceneInfo");
+        zombieInfos = JsonMgr.Instance.LoadData<List<ZombieInfo>>("ZombieInfo");
     }
 
     #region 数据处理

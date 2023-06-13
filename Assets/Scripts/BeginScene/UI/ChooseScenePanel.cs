@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChooseScenePanel : BasePanel
@@ -47,7 +48,7 @@ public class ChooseScenePanel : BasePanel
         btnStart.onClick.AddListener(() =>
         {
             UIManager.Instance.HidePanel<ChooseScenePanel>();
-            print("ÇÐ»»ÓÎÏ·³¡¾°");
+            SceneManager.LoadScene(nowSceneInfo.sceneName);
         });
 
         btnBack.onClick.AddListener(() =>
