@@ -11,4 +11,5 @@ public class ZombieInfo
     public int rotateSpeed;
     public int hp;
     public float atkOffset;
+    public int awardMoney;
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// 游戏数据管理器
@@ -14,10 +15,12 @@ public class GameDataManager
     public List<RoleInfo> roleInfos;    // 角色信息数据表
     public RoleInfo nowRoleInfo;        // 当前游戏选择的角色信息
 
-    public List<SceneInfo> sceneInfos;  // 场景信息表
+    public List<SceneInfo> sceneInfos;  // 场景信息数据表
     public SceneInfo nowSceneInfo;      // 当前游戏选择的场景信息
 
-    public List<ZombieInfo> zombieInfos;    // 丧尸信息表
+    public List<ZombieInfo> zombieInfos;    // 丧尸信息数据表
+
+    public List<TowerInfo> towerInfos;      // 防御塔信息数据表
 
     private GameDataManager()
     {
@@ -27,6 +30,7 @@ public class GameDataManager
         roleInfos = JsonMgr.Instance.LoadData<List<RoleInfo>>("RoleInfo");
         sceneInfos = JsonMgr.Instance.LoadData<List<SceneInfo>>("SceneInfo");
         zombieInfos = JsonMgr.Instance.LoadData<List<ZombieInfo>>("ZombieInfo");
+        towerInfos = JsonMgr.Instance.LoadData<List<TowerInfo>>("TowerInfo");
     }
 
     #region 数据处理
@@ -47,4 +51,20 @@ public class GameDataManager
     }
 
     #endregion
+
+    /// <summary>
+    /// 播放音效
+    /// </summary>
+    /// <param name="resName">音效切片文件名</param>
+    public void PlaySound(string resName)
+    {
+        GameObject soundObj = new GameObject("Sound");
+        AudioSource audioSource = soundObj.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load<AudioClip>(resName);
+        audioSource.volume = musicData.soundValue;
+        audioSource.mute = !musicData.soundOpen;
+        audioSource.Play();
+        
+        GameObject.Destroy(soundObj, 2);
+    }
 }

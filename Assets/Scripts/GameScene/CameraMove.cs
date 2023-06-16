@@ -13,8 +13,7 @@ public class CameraMove : MonoBehaviour
 
     private void Update()
     {
-        if (target == null)
-            return;
+        if (target == null) return;
 
         // ÉãÏñ»úÎ»ÖÃ
         cameraOffsetPos = target.position;

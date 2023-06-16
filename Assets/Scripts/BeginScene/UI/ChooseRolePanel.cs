@@ -113,6 +113,9 @@ public class ChooseRolePanel : BasePanel
 
         nowRoleInfo = GameDataManager.Instance.roleInfos[nowIndex];
         nowRoleObj = Instantiate(Resources.Load<GameObject>(nowRoleInfo.res), rolePos.position, rolePos.rotation);
+        Destroy(nowRoleObj.GetComponent<PlayerObject>());
+        // nowRoleObj.GetComponent<PlayerObject>().ClosePlayerMove();
+
         txtRoleName.text = nowRoleInfo.tips;
 
         UpdateUnlockButton();

@@ -5,4 +5,6 @@ public class SceneInfo
     public string tips;
     public string imgRes;
     public string sceneName;
+    public int money;
+    public int zoneHP;
 }

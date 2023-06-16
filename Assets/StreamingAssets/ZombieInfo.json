@@ -1,8 +1,20 @@
 [
-{"id":1,"res":"Zombie/Zombie_Male","animator":"Animator/Zombie/AggresiveZombie","atk":5,"moveSpeed":100,"rotateSpeed":100,"hp":10,"atkOffset":0.8},
-{"id":2,"res":"Zombie/Zombie_Female","animator":"Animator/Zombie/BrokenZombie","atk":5,"moveSpeed":100,"rotateSpeed":100,"hp":10,"atkOffset":0.8},
-{"id":3,"res":"Zombie/Zombie_Hulk","animator":"Animator/Zombie/HulkZombie","atk":5,"moveSpeed":60,"rotateSpeed":60,"hp":20,"atkOffset":1.5},
-{"id":4,"res":"Zombie/Zombie_Soldider","animator":"Animator/Zombie/AggresiveZombie","atk":5,"moveSpeed":150,"rotateSpeed":150,"hp":15,"atkOffset":0.5},
-{"id":5,"res":"Zombie/Zombie_Male","animator":"Animator/Zombie/CrawlZombie","atk":5,"moveSpeed":50,"rotateSpeed":50,"hp":10,"atkOffset":1},
-{"id":6,"res":"Zombie/Zombie_Female","animator":"Animator/Zombie/CrawlZombie","atk":5,"moveSpeed":50,"rotateSpeed":50,"hp":10,"atkOffset":1}
+	{
+		"id":1,"res":"Zombie/Zombie_Male","animator":"Animator/Zombie/AggresiveZombie","atk":5,"moveSpeed":5,"rotateSpeed":100,"hp":10,"atkOffset":0.8,"awardMoney":10
+	},
+	{
+		"id":2,"res":"Zombie/Zombie_Female","animator":"Animator/Zombie/BrokenZombie","atk":5,"moveSpeed":5,"rotateSpeed":100,"hp":10,"atkOffset":0.8,"awardMoney":10
+	},
+	{
+		"id":3,"res":"Zombie/Zombie_Hulk","animator":"Animator/Zombie/HulkZombie","atk":5,"moveSpeed":5,"rotateSpeed":100,"hp":20,"atkOffset":1.5,"awardMoney":10
+	},
+	{
+		"id":4,"res":"Zombie/Zombie_Soldider","animator":"Animator/Zombie/AggresiveZombie","atk":5,"moveSpeed":5,"rotateSpeed":100,"hp":15,"atkOffset":0.5,"awardMoney":10
+	},
+	{
+		"id":5,"res":"Zombie/Zombie_Male","animator":"Animator/Zombie/CrawlZombie","atk":5,"moveSpeed":5,"rotateSpeed":100,"hp":10,"atkOffset":1,"awardMoney":10
+	},
+	{
+		"id":6,"res":"Zombie/Zombie_Female","animator":"Animator/Zombie/CrawlZombie","atk":5,"moveSpeed":5,"rotateSpeed":100,"hp":10,"atkOffset":1,"awardMoney":10
+	}
 ]

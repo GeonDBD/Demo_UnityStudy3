@@ -24,7 +24,7 @@ public abstract class BasePanel : MonoBehaviour
         Init();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         // µ­Èëµ­³ö
         if (isShow && canvasGroup.alpha != 1)

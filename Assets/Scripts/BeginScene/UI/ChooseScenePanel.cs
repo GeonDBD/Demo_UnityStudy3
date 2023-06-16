@@ -48,7 +48,11 @@ public class ChooseScenePanel : BasePanel
         btnStart.onClick.AddListener(() =>
         {
             UIManager.Instance.HidePanel<ChooseScenePanel>();
-            SceneManager.LoadScene(nowSceneInfo.sceneName);
+            AsyncOperation ao = SceneManager.LoadSceneAsync(nowSceneInfo.sceneName);
+            ao.completed += (a) =>
+            {
+                GameLevelManager.Instance.Init(nowSceneInfo);
+            };
         });
 
         btnBack.onClick.AddListener(() =>

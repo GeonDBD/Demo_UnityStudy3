@@ -1,4 +1,47 @@
 [
-{"id":1,"res":"Role/1","atk":4,"lockMoney":0,"hp":100,"tips":"Tom","hitEff":"Eff/1"},
-{"id":2,"res":"Role/2","atk":4,"lockMoney":50,"hp":100,"tips":"FireBoomba","hitEff":"Eff/1"}
+	{
+		"id":1,
+		"res":"Role/1",
+		"atk":4,
+		"lockMoney":0,
+		"hp":100,
+		"tips":"汤姆·克兰西",
+		"hitEff":"Eff/1"
+	},
+	{
+		"id":2,
+		"res":"Role/2",
+		"atk":6,
+		"lockMoney":5000,
+		"hp":120,
+		"tips":"FireBoomba",
+		"hitEff":"Eff/1"
+	},
+	{
+		"id":3,
+		"res":"Role/3",
+		"atk":8,
+		"lockMoney":15000,
+		"hp":150,
+		"tips":"阿美莉卡大头兵",
+		"hitEff":"Eff/1"
+	},
+	{
+		"id":4,
+		"res":"Role/4",
+		"atk":15,
+		"lockMoney":50000,
+		"hp":100,
+		"tips":"麦克阿瑟将军",
+		"hitEff":"Eff/1"
+	},
+	{
+		"id":5,
+		"res":"Role/5",
+		"atk":20,
+		"lockMoney":500000,
+		"hp":500,
+		"tips":"战争机器",
+		"hitEff":"Eff/1"
+	}
 ]

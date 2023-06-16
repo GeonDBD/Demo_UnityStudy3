@@ -11,7 +11,7 @@ public class PlayerObject : MonoBehaviour
     [Header("武器伤害检测")]
     public Transform firePoint;
 
-    public bool isOpenPlayerMove;
+    public bool isOpenPlayerMove;   // 是否开启玩家角色移动
     private bool isMove;
     private bool isOpenRoll = true;
     private float moveMultiple = 1;
@@ -68,6 +68,16 @@ public class PlayerObject : MonoBehaviour
             animator.SetTrigger("Fire");
         }
     }
+
+    public void OpenPlayerMove()
+    {
+        isOpenPlayerMove = true;
+    }
+
+    public void ClosePlayerMove()
+    {
+        isOpenPlayerMove = false;
+    }
     #endregion
 
     /// <summary>
@@ -90,12 +100,27 @@ public class PlayerObject : MonoBehaviour
     {
         if (firePoint == null) return;
 
-        RaycastHit[] raycastHits = Physics.RaycastAll(new Ray(firePoint.position, firePoint.forward), 1000, 1 << LayerMask.NameToLayer("Zombie"));
+        // 播放音效
+        GameDataManager.Instance.PlaySound("Music/Gun");
 
+        // 射线检测
+        RaycastHit[] raycastHits = Physics.RaycastAll(new Ray(firePoint.position, transform.forward), 1000, 1 << LayerMask.NameToLayer("Zombie"));
         for (int i = 0; i < raycastHits.Length; i++)
         {
             // 获得怪物脚本，调用其受伤方法
+            ZombieObject zombieObject = raycastHits[i].transform.gameObject.GetComponent<ZombieObject>();
 
+            if (zombieObject != null && !zombieObject.isDead)
+            {
+                // 特效创建
+                GameObject effObj = Instantiate(Resources.Load<GameObject>(GameDataManager.Instance.nowRoleInfo.hitEff));
+                effObj.transform.position = raycastHits[i].point;
+                effObj.transform.rotation = Quaternion.LookRotation(raycastHits[i].normal);
+                Destroy(effObj, 2.5f);
+
+                zombieObject.Wound(atk);
+                break;
+            }
         }
     }
     #endregion

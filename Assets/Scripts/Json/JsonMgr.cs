@@ -1,6 +1,4 @@
 ﻿using LitJson;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -30,6 +28,7 @@ public class JsonMgr
         string path = Application.persistentDataPath + "/" + fileName + ".json";
         //序列化 得到Json字符串
         string jsonStr = "";
+
         switch (type)
         {
             case JsonType.JsonUtlity:
@@ -39,6 +38,7 @@ public class JsonMgr
                 jsonStr = JsonMapper.ToJson(data);
                 break;
         }
+
         //把序列化的Json字符串 存储到指定路径的文件中
         File.WriteAllText(path, jsonStr);
     }

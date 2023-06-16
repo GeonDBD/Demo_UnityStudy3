@@ -33,18 +33,21 @@ public class SafeZoneObject : MonoBehaviour
     /// <summary>
     /// 安全区受伤方法
     /// </summary>
-    /// <param name="dmg"></param>
-    public void Wound(int dmg)
+    /// <param name="damage">伤害量</param>
+    public void Wound(int damage)
     {
         if (isDead) return;
 
-        hp -= dmg;
+        hp -= damage;
+
+        // 游戏结束
         if (hp <= 0)
         {
             hp = 0;
             isDead = true;
 
-            // 游戏结束
+            GameOverPanel gameOverPanel = UIManager.Instance.ShowPanel<GameOverPanel>();
+            gameOverPanel.InitInfo((int)(GameLevelManager.Instance.playerObj.money * 0.5f), false);
         }
 
         UpdateHp(hp, maxHP);

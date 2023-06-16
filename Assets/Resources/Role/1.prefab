@@ -3300,6 +3300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
+  firePoint: {fileID: 1690066395}
   isOpenPlayerMove: 0
 --- !u!1001 &8776193910444781708
 PrefabInstance:
